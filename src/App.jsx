@@ -1,11 +1,10 @@
 import './App.css';
-import { UserTable } from './pages/UserTable/UserTable';
-import { Login } from './pages/Login/login';
+import { AppRoutes } from './routes';
 
 export function App() {
   return (
     <>
-      <UserTable/>
+      <AppRoutes/>
     </>
   )
 }

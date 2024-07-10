@@ -1,11 +1,12 @@
 import style from './Login.module.css';
 import image from '../../images/backgroundImage.png';
+import { Link } from 'react-router-dom';
 
 export function Login(){
     return(
         <>
             <div className={style.background}>
-                <img src={image} alt="" />
+                <img src={image}/>
             </div>
 
             <section className={style.loginArea}>
@@ -22,7 +23,7 @@ export function Login(){
                         <input type="password" id="password" placeholder="Senha"/>
                     </div>
 
-                    <button>Login</button>
+                    <Link to='/tabela'><button>Login</button></Link>
                 </form>
             </section>
         </>

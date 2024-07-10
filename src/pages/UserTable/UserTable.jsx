@@ -1,67 +1,69 @@
+import { useState } from 'react';
+import { Modal } from '../../Components/Modal/Modal';
 import style from './UserTable.module.css';
+import { Link } from 'react-router-dom';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
 
 export function UserTable(){
+    const [openModal, setOpenModal] = useState(false)
+
     return(
         <div className={style.container}>
             <section className={style.table}>
                 <header>
                     <h2>Usuários</h2>
-                    <button>Adicionar usuário</button>
+                    <button onClick={() => setOpenModal(true)}>Adicionar usuário</button>
                 </header>
 
-                <div className={style.category}>
-                    <p>NOME</p>
-                    <p>EMAIL</p>
-                    <p>NÍVEL DE ACESSO</p>
-                </div>
+                <table>
+                <thead>
+                    <tr>
+                        <th className={style.nameTable}>Nome</th>
+                        <th>Email</th>
+                        <th>Nível de Acesso</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td className={style.nameList}>Yorton</td>
+                        <td>Yorton@hptmail.com</td>
+                        <td>5</td>
+                        <td className={style.icons}>
+                            <button><EditOutlinedIcon sx={{ color: "#065D2F", fontSize: 28 }}/></button>
+                            <button><DeleteOutlineOutlinedIcon sx={{ color: "red", fontSize: 28 }}/></button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td className={style.nameList}>Yorton</td>
+                        <td>Yorton@hptmail.com</td>
+                        <td>5</td>
+                        <td className={style.icons}>
+                            <button><EditOutlinedIcon sx={{ color: "#065D2F", fontSize: 28 }}/></button>
+                            <button><DeleteOutlineOutlinedIcon sx={{ color: "red", fontSize: 28 }}/></button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td className={style.nameList}>Yorton</td>
+                        <td>Yorton@hptmail.com</td>
+                        <td>5</td>
+                        <td className={style.icons}>
+                            <button><EditOutlinedIcon sx={{ color: "#065D2F", fontSize: 28 }}/></button>
+                            <button><DeleteOutlineOutlinedIcon sx={{ color: "red", fontSize: 28 }}/></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <div className={style.list}>
-                    <div className={style.user}>
-                        <p>Ricardo Oliveira Lima</p>
-                        <p>ricardo.santos@gmail.com.br</p>
-                        <p>5</p>
-
-                        <div className={style.icons}>
-                            <i class="bi bi-pencil"></i>
-                            <i class="bi bi-trash"></i>
-                        </div>
-
-                    </div>
-                </div>
+                <Link to='/usuario'><button>tabela testeeeeeeeeeee</button></Link>
             </section>
 
-            <div className={style.janelaModal}>
-                
-                <form action="">
-                    <div className={style.header}>
-                        <h2>Editar usuário</h2>
-                        <button className={style.close}><i class="bi bi-x-lg"></i></button>
-                    </div>
-
-                    <div className={style.name}>
-                        <label for="nome">Nome</label>
-                        <input type="text" id="nome" placeholder="Nome"/>
-                    </div>
-                    <div className={style.email}>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Email"/>
-                    </div>
-                    <div className={style.level}>
-                        <label for="level">Nível de acesso</label>
-                        <input type="number" id="level" placeholder="Nível de acesso"/>
-                    </div>
-                    <div className={style.password}>
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" placeholder="Senha"/>
-                    </div>
-                    <div className={style.confirmPass}>
-                        <label for="confirmPass">Confirmar senha</label>
-                        <input type="password" id="confirmPass" placeholder="Confirmar senha"/>
-                    </div>
-
-                    <input type="submit" value="Salvar" className={style.submit}/>
-                </form>
-            </div>
+            <Modal isOpen={openModal} setOpenModal={() => setOpenModal(!openModal)}/>
         </div>
     )
 }

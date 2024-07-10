@@ -1,0 +1,144 @@
+.container{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white-500);
+}
+
+.userPage{
+    width: calc(100% - 4.4375rem);
+    height: calc(100% - 4.1875rem);
+
+    border-radius: 15px;
+    box-shadow: 0 11.07px 14.4px var(--black-200);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--gray);
+}
+
+.perfil{
+    display: flex;
+    gap: 1.4375rem;
+}
+
+.pic{
+    width: 5.75rem;
+    height: 5.75rem;
+    margin-left: 3.375rem;
+    margin-top: 1.5rem;
+
+    color: white;
+    font-size: 1.6825rem;
+    font-weight: 600;
+    background-color: var(--green);
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+}
+
+.userName{
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    position: absolute;
+
+    margin-top: 3.4375rem;
+    margin-left: 10.5625rem;
+}
+
+.header button{
+    width: 10.125rem;
+    height: 2.5rem;
+    font-size: 1rem;
+
+    color: white;
+    background-color: var(--green);
+
+    border: none;
+    border-radius: 6px;
+
+    padding: 0.5rem 0.78125rem;
+    margin: 1.875rem;
+}
+
+.header button:hover{
+    cursor: pointer;
+    background-color: var(--green-hover);
+    transition: 0.2s;
+}
+
+.info{
+    width: 1000px;
+    height: 320px;
+    padding: 3.375rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info h1{
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    width: 100%;
+}
+
+.passArea{
+    display: flex;
+}
+
+.name, .email, .level, .password, .confirmPass{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    margin-top: 1.5rem;
+    margin-right: 1.394375rem;
+}
+
+.name input, .level input, .password input{
+    width: 26.918125rem;
+    height: 2.5rem;
+    font-size: 1rem;
+
+    color: var(--gray-200);
+
+    border-radius: 6px;
+    border: 1px solid var(--gray);
+
+    padding: 0.5rem;
+}
+
+.confirmPass input, .email input{
+    width: 22.47125rem;
+    height: 2.5rem;
+    font-size: 1rem;
+
+    color: var(--gray-200);
+
+    border-radius: 6px;
+    border: 1px solid var(--gray);
+
+    padding: 0.5rem;
+}
+
+.name label, .level label, .password label, .confirmPass label, .email label{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+
