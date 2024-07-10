@@ -3,10 +3,7 @@ import style from './Modal.module.css';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { FormAddUser } from '../FormAddUser/FormAddUser';
 
-export function Modal({ isOpen, setOpenModal }){
-
-
-
+export function Modal({ title, isOpen, setOpenModal, children }){
     if(isOpen){
         return(
             <>
@@ -14,11 +11,11 @@ export function Modal({ isOpen, setOpenModal }){
 
                     <div className={style.content}>
                         <div className={style.header}>
-                            <h2>Adicionar usuário</h2>
+                            <h2>{title}</h2>
                             <button className={style.close} onClick={setOpenModal}><CloseRoundedIcon/></button>
                         </div>
 
-                        <FormAddUser/>
+                        { children }
 
                         <div className={style.button}>
                             <input type="submit" value="Salvar" className={style.submit}/>

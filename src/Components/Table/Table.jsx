@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Modal } from '../../Components/Modal/Modal';
 import { Users } from '../Users/Users';
 import usersInfo from '../../json/db.json';
+import { FormAddUser } from '../FormAddUser/FormAddUser';
 
 export function Table(){
     const [openModal, setOpenModal] = useState(false)
@@ -29,7 +30,10 @@ export function Table(){
                 </table>
 
             </section>
-            <Modal isOpen={openModal} setOpenModal={() => setOpenModal(!openModal)}/>
+
+            <Modal title="Adicionar usuário" isOpen={openModal} setOpenModal={() => setOpenModal(!openModal)}>
+                <FormAddUser/>
+            </Modal>
         </div>
     )
 } 
