@@ -12,40 +12,20 @@
     z-index: 999;
 }
 
-.janelaModal form{ 
+.content{
     width: 678px;
     height: 678px;
-    
+    padding: 54px;
+
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 
     background-color: white;
-
-    padding: 54px;
 }
 
 .header{
     display: flex;
     justify-content: space-between;
-}
-
-.name, .email, .level, .password, .confirmPass{
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.name input, .email input, .level input, .password input, .confirmPass input{
-    width: 35.625rem;
-    height: 2.5rem;
-    font-size: 1rem;
-
-    padding: 8px 12px;
-    border-radius: 6px;
-    border: 1px solid var(--gray);
 }
 
 .button{
@@ -54,14 +34,13 @@
 }
 
 .submit{
-    width: 4.625rem;
-    height: 2.5rem;
+    width: 74px;
+    height: 40px;
 
     background-color: var(--green);
     color: white;
     border: none;
     border-radius: 6px;
-    
 }
 
 .submit:hover{
@@ -72,11 +51,9 @@
 
 .close{
     border: none;
-    background-color: white;
+    background: transparent;
     font-size: 1.5rem;
-    
-}
-
-.close:hover{
     cursor: pointer;
 }
+
+

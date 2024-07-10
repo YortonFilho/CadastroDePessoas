@@ -1,9 +1,7 @@
 .background{
     position: absolute;
-    background-size: cover;
     width: 55%;
     height: 100vh;
-
     z-index: -999;
 }
 
@@ -11,7 +9,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
 }
 
 .loginArea{
@@ -46,12 +43,13 @@
     gap: 7.17px;
 
     font-size: 1.04625rem;
-    margin-inline: 1rem;
+    font-weight: 500;
+    margin-inline: 16px;
 }
 
 .email input, .password input{
-    width: 28.68rem;
-    height: 48px;
+    width: 459.07px;
+    height: 48.13px;
     font-size: 1.195625rem;
 
     border-radius: 7.17px;
@@ -64,8 +62,8 @@
 }
 
 .form button{
-    width: 28.68rem;
-    height: 48px;
+    width: 459.07px;
+    height: 48.13px;
     font-size: 1.04625rem;
 
     color: white;

@@ -1,6 +1,7 @@
 .container{
     width: 100%;
     height: 100vh;
+    padding: 71px 133px;
 
     display: flex;
     flex-direction: row;
@@ -11,8 +12,8 @@
 }
 /* ------------------------------------------------------------------------------- tabela */
 .table{
-    width: calc(100% - 8.3125rem);
-    height: calc(100% - 4.4375rem);
+    width: 100%;
+    height: 100%;
 
     background-color: white;
 
@@ -24,17 +25,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2.125rem;
+    margin: 32.86px;
     margin-left: 39.28px;
 }
 
-.table header h2{
-    font-size: 1.5rem;
-}
-
 .table header button{
-    width: 10.135625rem;
-    height: 1.9375rem;
+    width: 162.17px;
+    height: 31px;
     font-size: 1rem;
 
     border-radius: 15.81px;
@@ -49,28 +46,6 @@
     background-color: var(--green-hover);
     transition: 0.2s;
 }
-
-.category{
-    width: auto;
-    height: 65.1px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding-inline-start: 2.455rem;
-    padding-inline-end: 11.4375rem;
-
-    background-color: var(--white-500);
-
-    border-top: 1px solid var(--gray);
-}
-
-.category p{
-    font-size: 1.1225rem;
-    color: var(--gray-300);
-    width: 244.34px;
-}
 /* ------------------------------------------------------------------------------- lista */
 .table table{
     width: 100%;
@@ -80,22 +55,13 @@
 
 .table thead{
     background-color: var(--white-500);
+    border-top: 1px solid var(--gray);
 }
 
 .nameTable{
     text-align: left;
     display: flex;
     margin-left: 39.28px;
-}
-
-.nameList{
-    text-align: left;
-    display: flex;
-    margin-left: 39.28px;
-}
-
-.table thead{
-    border-top: 1px solid var(--gray);
 }
 
 .table thead th{
@@ -105,30 +71,4 @@
 
     color: var(--gray-300);
     text-transform: uppercase;
-}
-
-.table tbody{
-    border-top: 1px solid var(--gray);
-}
-
-.table tbody td{
-    padding: 27.26px 38px 72.39px 0px;
-
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-.icons{
-    display: flex;
-    gap: 11px;
-    justify-content: end;
-}
-
-.icons button{
-    border: none;
-    background: transparent;
-}
-
-.icons button:hover{
-    cursor: pointer;
 }

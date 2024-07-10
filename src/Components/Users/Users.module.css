@@ -1,0 +1,57 @@
+tbody{
+    border-top: 1px solid var(--gray);
+}
+
+tbody td{
+    padding: 27.26px 38px 72.39px 0px;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.nameList{
+    text-align: left;
+    display: flex;
+    margin-left: 39.28px;
+
+    text-decoration: none;   
+}
+
+.nameList button{
+    border: none;
+    background: transparent;
+
+    font-size: 1rem;
+    font-weight: 500;
+    
+}
+
+.nameList button:hover{
+    cursor: pointer;
+}
+
+.table tbody{
+    border-top: 1px solid var(--gray);
+}
+
+.table tbody td{
+    padding: 27.26px 38px 72.39px 0px;
+
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.icons{
+    display: flex;
+    gap: 11px;
+    justify-content: end;
+}
+
+.icons button{
+    border: none;
+    background: transparent;
+}
+
+.icons button:hover{
+    cursor: pointer;
+}

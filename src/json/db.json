@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Yorton Morschbarcher",
+    "email": "Yorton@gmail.com",
+    "level": 5
+  },
+  {
+    "id": 2,
+    "name": "Julia romero",
+    "email": "julia@hotmail.com",
+    "level": 2
+  },
+  {
+    "id": 3,
+    "name": "artur damaceno",
+    "email": "artur@hotmail.com",
+    "level": 4
+  }
+]
