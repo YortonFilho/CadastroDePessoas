@@ -1,11 +1,11 @@
 .janelaModal{
     width: 100%;
-    height: 100vh;
+    height: 100vw;
     position: absolute;
+    top: 0;
 
     display: flex;
     justify-content: center;
-    align-items: center;
 
     background-color: rgba(0, 0, 0, 0.301);
 
@@ -16,6 +16,7 @@
     width: 678px;
     height: 678px;
     padding: 54px;
+    margin-top: 71px;
 
     display: flex;
     flex-direction: column;

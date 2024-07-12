@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 71px 133px;
 
     display: flex;
@@ -49,6 +49,7 @@
 /* ------------------------------------------------------------------------------- lista */
 .table table{
     width: 100%;
+    height: 100%;
     text-align: center;
     border-collapse: collapse;
 }
