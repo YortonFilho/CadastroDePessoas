@@ -16,10 +16,6 @@ export function Modal({ title, isOpen, setOpenModal, children }){
                         </div>
 
                         { children }
-
-                        <div className={style.button}>
-                            <input type="submit" value="Salvar" className={style.submit}/>
-                        </div>
                     </div>
                 </div>
             </>

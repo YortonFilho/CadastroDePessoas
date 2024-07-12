@@ -34,22 +34,6 @@
     justify-content: end;
 }
 
-.submit{
-    width: 74px;
-    height: 40px;
-
-    background-color: var(--green);
-    color: white;
-    border: none;
-    border-radius: 6px;
-}
-
-.submit:hover{
-    cursor: pointer;
-    background-color: var(--green-hover);
-    transition: 0.2s;
-}
-
 .close{
     border: none;
     background: transparent;

@@ -1,12 +1,27 @@
 import style from './Table.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal } from '../../Components/Modal/Modal';
 import { Users } from '../Users/Users';
-import usersInfo from '../../json/db.json';
 import { FormAddUser } from '../FormAddUser/FormAddUser';
 
 export function Table(){
     const [openModal, setOpenModal] = useState(false)
+    const [users, setUsers] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try{
+                const response = await fetch("http://localhost:8080/users")
+                const data = await response.json()
+                setUsers(data)
+            } 
+            catch(error){
+                console.error('Erro ao buscar dados!', error)
+            }
+        }
+
+        fetchData()
+    },[users])
 
     return(
         <div className={style.container}>
@@ -26,13 +41,13 @@ export function Table(){
                         </tr>
                     </thead>
 
-                    {usersInfo.map(usersInfo => <Users key={usersInfo.id} id={usersInfo.id} name={usersInfo.name} email={usersInfo.email} level={usersInfo.level}/>)}
+                    {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.level}/>)}
                 </table>
 
             </section>
 
             <Modal title="Adicionar usuário" isOpen={openModal} setOpenModal={() => setOpenModal(!openModal)}>
-                <FormAddUser/>
+                <FormAddUser />
             </Modal>
         </div>
     )

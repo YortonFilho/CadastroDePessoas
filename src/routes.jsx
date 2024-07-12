@@ -10,7 +10,7 @@ export function AppRoutes(){
             <Routes>
                 <Route path="/" element={<Login/>}></Route>
                 <Route path="/tabela" element={<UserTable/>}></Route>
-                <Route path="/usuario" element={<UserPage/>}></Route>
+                <Route path="/usuario/:id" element={<UserPage/>}></Route>
             </Routes>
         </BrowserRouter>
     )
