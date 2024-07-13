@@ -6,7 +6,7 @@ export function Login(){
     return(
         <>
             <div className={style.background}>
-                <img src={image}/>
+                <img src={image} alt="Imagem de fundo"/>
             </div>
 
             <section className={style.loginArea}>

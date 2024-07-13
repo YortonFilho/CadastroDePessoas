@@ -8,6 +8,7 @@ export function Table(){
     const [openModal, setOpenModal] = useState(false)
     const [users, setUsers] = useState([])
 
+    //extração de dados do banco de dados
     useEffect(() => {
         const fetchData = async () => {
             try{

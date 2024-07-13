@@ -33,8 +33,8 @@ export function UserPage(){
         <div className={style.container}>
             <section className={style.userPage}>
                 <header className={style.header}>
-                    <div className={style.perfil}>
-                        <p className={style.pic}>YM</p>
+                    <div className={style.headerName}>
+                        <p className={style.avatar}>{users.name.toUpperCase()[0]}</p>
                         <p className={style.userName}>{users.name}</p>
                     </div>
 

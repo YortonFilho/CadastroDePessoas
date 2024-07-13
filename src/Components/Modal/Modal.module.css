@@ -1,4 +1,4 @@
-.janelaModal{
+.content{
     width: 100%;
     height: 100vw;
     position: absolute;
@@ -10,10 +10,10 @@
 
     background-color: rgba(0, 0, 0, 0.301);
 
-    z-index: 999;
+    z-index: 900;
 }
 
-.content{
+.janelaModal{
     width: 678px;
     height: 678px;
     padding: 54px;

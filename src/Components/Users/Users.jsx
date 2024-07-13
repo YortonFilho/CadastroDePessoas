@@ -4,7 +4,7 @@ import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined
 import { Link } from 'react-router-dom';
 import { FormEditUser } from '../FormEditUser/FormEditUser';
 import { Modal } from '../Modal/Modal';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export function Users({ id, name, email, level}){
     const [openModal, setOpenModal] = useState(false)
