@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import style from './FormEditUser.module.css';
-import { useParams } from 'react-router-dom';
 
 export function FormEditUser({ id }){
     const [users, setUsers] = useState()
@@ -20,6 +19,32 @@ export function FormEditUser({ id }){
         fetchData()
     },[users])
 
+    const [name, setName] = useState()
+    const [email, setEmail] = useState()
+    const [accessLevel, setAccessLevel] = useState()
+    const [password, setPassword] = useState()
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+
+        const userData = {name, email, accessLevel, password}
+
+        try{
+            const response = await fetch(`http://localhost:8080/user/${id}`, {
+                method:"PUT",
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: JSON.stringify(userData),
+            })
+            
+        } 
+        catch(error){
+            console.error('Erro ao enviar dados!', error)
+        }
+    }
+
     if (!users){
         return(
             <div>
@@ -30,25 +55,25 @@ export function FormEditUser({ id }){
 
   return(
     <>
-      <form className={style.form}>
+      <form className={style.form} onSubmit={handleSubmit}>
             <div className={style.name}>
                 <label for="name">Nome</label>
-                <input value={users.name} type="text" id="name"/>
+                <input placeholder={users.name} onChange={(e) => setName(e.target.value)} type="text" id="name"/>
             </div>
 
             <div className={style.email}>
                 <label for="email">Email</label>
-                <input value={users.email} type="email" id="email"/>
+                <input placeholder={users.email} onChange={(e) => setEmail(e.target.value)} type="email" id="email"/>
             </div>
 
             <div className={style.level}>
                 <label for="level">Nível de acesso</label>
-                <input value={users.accessLevel} type="text" id="accessLevel" placeholder="Nível de acesso"/>
+                <input placeholder={users.accessLevel} onChange={(e) => setAccessLevel(e.target.value)} type="text" id="accessLevel"/>
             </div>
 
             <div className={style.password}>
                 <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Senha"/>
+                <input type="password" onChange={(e) => setPassword(e.target.value)} id="password" placeholder="Senha"/>
             </div>
             
             <div className={style.confirmPass}>

@@ -41,7 +41,7 @@ export function Table(){
                         </tr>
                     </thead>
                     
-                    {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.level}/>)}
+                    {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.accessLevel}/>)}
                 </table>
 
             </section>

@@ -21,8 +21,6 @@ export function FormAddUser(){
                 },
                 body: JSON.stringify(userData),
             })
-            const data = await response.json()
-            console.log(data)
             
         } 
         catch(error){
