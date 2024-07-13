@@ -31,16 +31,16 @@ export function Table(){
                     <button onClick={() => setOpenModal(true)}>Adicionar usuário</button>
                 </header>
 
-                <table>
+                <table className={style.userList}>
                     <thead>
                         <tr>
-                            <th className={style.nameTable}>Nome</th>
+                            <th className={style.nameList}>Nome</th>
                             <th>Email</th>
                             <th>Nível de Acesso</th>
                             <th></th>
                         </tr>
                     </thead>
-
+                    
                     {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.level}/>)}
                 </table>
 

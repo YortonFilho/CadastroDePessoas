@@ -38,3 +38,8 @@
     background-color: var(--green-hover);
     transition: 0.2s;
 }
+
+.button{
+    display: flex;
+    justify-content: end;
+}

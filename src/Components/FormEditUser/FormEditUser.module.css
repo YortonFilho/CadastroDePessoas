@@ -1,0 +1,49 @@
+.form{ 
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-block: 25.52px 32px;
+}
+
+.form label{
+  display: flex;
+}
+
+.name, .email, .level, .password, .confirmPass{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.name input, .email input, .level input, .password input, .confirmPass input{
+  width: 570px;
+  height: 40px;
+  font-size: 1rem;
+
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--gray);
+}
+
+.submit{
+  width: 74px;
+  height: 40px;
+
+  background-color: var(--green);
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.submit:hover{
+  cursor: pointer;
+  background-color: var(--green-hover);
+  transition: 0.2s;
+}
+
+.button{
+  display: flex;
+  justify-content: end;
+}
