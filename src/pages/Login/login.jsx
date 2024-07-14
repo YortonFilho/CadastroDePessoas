@@ -23,7 +23,7 @@ export function Login(){
                         <input type="password" id="password" placeholder="Senha"/>
                     </div>
 
-                    <Link to='/tabela'><button>Login</button></Link>
+                    <Link to='/tabela' className={style.button}><button>Login</button></Link>
                 </form>
             </section>
         </>
