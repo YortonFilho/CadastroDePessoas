@@ -9,6 +9,8 @@
     align-items: center;
 
     background-color: var(--white-500);
+
+    z-index: 1;
 }
 
 .userPage{
@@ -139,6 +141,37 @@
 .name label, .level label, .password label, .confirmPass label, .email label{
     font-weight: 600;
     font-size: 1rem;
+}
+
+@media(max-width: 1200px){
+    .name input, .level input, .password input, .confirmPass input, .email input, .info{
+        width: 100%;
+    }
+    .container{
+        padding: 50px;
+    }
+}
+
+@media(max-width: 990px){
+    .passArea{
+        display: block;
+    }
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media(max-width: 670px){
+    .userName{
+        z-index: -1;
+    }
+    .container{
+        background-color: white;
+    }
+    .userPage{
+        box-shadow: 0 0 0 0;
+    }
 }
 
 

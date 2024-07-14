@@ -33,7 +33,9 @@ export function FormEditUser({ id }){
         if (password !== confirmPassword){
             window.alert('As senhas não são iguais! Tente novamente!')
             return;
-        } 
+        } else if(password === confirmPassword){
+            window.alert('Usuário editado com sucesso!')
+        }
 
         const userData = {name, email, accessLevel, password}
 

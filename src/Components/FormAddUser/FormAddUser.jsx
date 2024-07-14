@@ -14,6 +14,8 @@ export function FormAddUser() {
         if (password !== confirmPassword) {
             window.alert('As senhas não são iguais! Tente novamente!')
             return;
+        } else if(password === confirmPassword){
+            window.alert('Usuário cadastrado com sucesso!')
         }
 
         const userData = { name, email, accessLevel, password }

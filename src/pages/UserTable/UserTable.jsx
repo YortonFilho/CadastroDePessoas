@@ -31,20 +31,19 @@ export function UserTable(){
                     <button onClick={() => setOpenModal(true)}>Adicionar usuário</button>
                 </header>
 
-                <div className={style.userList}>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th className={style.nameList}>Nome</th>
-                                <th>Email</th>
-                                <th>Nível de Acesso</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        
-                        {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.accessLevel}/>)}
-                    </table>
-                </div>
+                <table className={style.userList}>
+                    <thead>
+                        <tr>
+                            <th className={style.nameList}>Nome</th>
+                            <th>Email</th>
+                            <th>Nível de Acesso</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    
+                    {users.map(users => <Users key={users.id} id={users.id} name={users.name} email={users.email} level={users.accessLevel}/>)}
+                </table>
+
             </section>
 
             <Modal title="Adicionar usuário" isOpen={openModal} setOpenModal={() => setOpenModal(!openModal)}>
