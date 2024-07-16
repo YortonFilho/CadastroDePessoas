@@ -28,7 +28,7 @@ O ícone da lixeira, que seria para excluir o usuário acabei não conseguindo f
 
 Deixei a página de login e a página de usuário responsiva, mas a página da tabela acabei não conseguindo.
 
-## Como Rodar o Projeto
+## Como clonar o Projeto
 
 1 - Clone o Repositório
 
